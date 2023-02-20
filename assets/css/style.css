@@ -8,22 +8,32 @@ html, body {
     font-family: "Inter", sans-serif;
     color: white;
   }
- 
+ #p {
+    text-align: right;
+    float: right;
+ }
   svg {
     margin-left: 10px;
   }
+  svg:hover,
+  svg.selected,
+  svg:hover ~ svg,
+  svg.selected ~ svg,
   svg path:hover {
     fill: #00ffff;
   }
-  .svg:before {
-    content: '\2605';
-    width: 60px;
-    height: 60px;
-    font-size: 70px;
-  }
-  .svg.selected,
-  .svg:hover ~ .svg,
-  
+
+/* .star:hover,
+.star.selected,
+.star:hover ~ .star,
+{
+  transition: color 0.8s ease;
+  color: black;
+} */
+  svg:hover,
+  svg.selected,
+  svg:hover ~ svg,
+  svg.selected ~ svg,
   .lumus {
     fill: #00ffff;
   }
