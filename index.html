@@ -2,14 +2,44 @@
 <html lang="it">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BUILD WEEK 1</title>
+    <title>Homepage</title>
+    <link rel="stylesheet" href="assets/css/normalize.css">
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
+    <header>
+        <img src="assets/img/epicode_logo.png" alt="logo Epicode" id="logo">
+    </header>
     <div id="container">
+        <main>
+            <div id="titoloPrincipale">
+                <h1>Welcome to <span>your exam</span></h1>
+            </div>
+            <div id="istruzioni">
+                <h3>Instructions</h3>
+                <p>We don't expect most engineers to know the answers to all of these questions, so don't worry if you're unsure of a few of them.</p>
+                <br>
+                <ul>
+                    <li>Each question is <b>timed</b> and can only be <b>answered once</b>.</li>
+                    <li>Changing browser tab or opening other windows will <b>invalidate the question</b>.</li>
+                    <li>This exam will take approx. <b>0-5 minutes.</b></li>
+                </ul>
+            </div>
+            <div id="termini">
+                <span>
+                    <input type="checkbox" id="checkTermini" name="checkbox" onclick="attivaBottone()">
+                    <label for="termini"><b>I promise to answer myself without help from anyone</b></label>
+                </span>
+                <span>
+                    <button type="button" class="pulsanteCeleste" id="iniziaQuiz" onclick="window.location.href='quiz.html'" disabled>PROCEED</button>
+                </span>
+            </div>
+            </main>
+=======
         <p id="timer">ciao come va</p>
     </div>
-
-<script src="assets/script/script.js"></script>
+    <script src="assets/js/primaPagina.js"></script>
 </body>
 </html>
