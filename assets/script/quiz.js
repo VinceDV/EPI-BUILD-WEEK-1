@@ -97,15 +97,12 @@ const questions = [
       incorrect_answers: ["Python", "C", "Jakarta"],
     },
   ];
- 
   const answers = {
     correct_answers: 0,
     questions: questions.length,
     punteggio: 0,
   };
-  
-  window.onload = function () {
-  
+
     let totalQuestionNumber = document.querySelector(".question-tot");
     totalQuestionNumber.innerText = " / " + questions.length;
   
@@ -118,7 +115,6 @@ const questions = [
     //passaggio alla pagina successiva
     const gotoResultsPage = function () {
       window.location.assign(
-        "./resultpage.html?correct_answers=" +
           answers.correct_answers +
           "&tot_questions=" +
           answers.questions
@@ -138,14 +134,6 @@ const questions = [
       container.remove();
       footer.remove();
   
-      image.src = "./assets/img/donna-tiktok-758x426.webp";
-  
-      main.style = "text-align: center;";
-      main.appendChild(image);
-      main.appendChild(text);
-    };
-    //set timer
-    let questionMaxTime = 10;
     let counter = questionMaxTime;
   
     const myTimer = function () {
@@ -164,7 +152,6 @@ const questions = [
           timerBar.classList.remove("animation");
           timerBar.offsetWidth;
           timerBar.classList.add("animation");
-          //
           loadingResults();
           window.setTimeout(gotoResultsPage, 10);
         }
@@ -238,5 +225,3 @@ const questions = [
       }
     };
     newQuestion(0);
-  
-  }
