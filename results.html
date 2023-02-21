@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Results</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
+  </head>
+  <body>
+    <div id="container">
+      <div class="titolo" id="titoloPrincipale">
+        <h1>Results:</h1>
+        <h3>The summary of your answers</h3>
+      </div>
+      <div id="centro">
+        <div class="lineaBlocco" id="correct">
+          <h2 id="corretto">Correct</h2>
+          <p id="quantiG"></p>
+        </div>
+        <div class="lineaBlocco" id="grafico">
+          <canvas id="myChart"></canvas>
+          <p id="esito"></p>
+        </div>
+        <div id="testoCentro">Lorem ipsum dolor sit amet consectetur adipisicing elit. Est unde, harum modi earum rerum tempora at deleniti quidem voluptas aliquam assumenda! Repudiandae illum molestiae impedit tempore numquam. Officia, rerum quisquam?</div>
+        <div class="lineaBlocco" id="wrong">
+          <h2 id="sbagliato">Wrong</h2>
+          <p id="quantiS"></p>
+        </div>
+      </div>
+      <div id="rateUs">
+        <a href="rating.html"><button type="button">RATE US</button></a>
+      </div>
+    </div>
+
+    <script src="assets/script/results.js"></script>
+    
+  </body>
+</html>
