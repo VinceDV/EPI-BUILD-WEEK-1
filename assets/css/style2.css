@@ -6,11 +6,11 @@ html body {
     background-size: cover;
     background-repeat: no-repeat;
     width: 100%;
-    margin-left: 5em;
+    margin-left: 8em;
 }
 
 #container {
-    width: 100%;
+    width: 80%;
 }
 
 #logo {
@@ -43,18 +43,20 @@ html body {
     color: white;
     font-family: 'Inter', sans-serif;
     line-height: 1.5em;
-    font-size: 14px;
+    font-size: 20px;
     width: 60%;
 }
 
 #istruzioni ul li {
     line-height: 2em;
 }
-
+#terminiScritta {
+    font-size: 20px;
+}
 #termini {
     margin-top: 3em;
     color: white;
-    width: 70%;
+    width: 80%;
 }
 
 .pulsanteCeleste {
@@ -62,9 +64,11 @@ html body {
     border: none;
     padding: 0.9em 3.5em;
     font-size: 20px;
+    color: #23184E;
     background-color: #00FFFF;
     font-family: 'Outfit', sans-serif;
     font-weight: 700;
+    transition: .3s;
 }
 
 .pulsanteCeleste:hover:enabled {
