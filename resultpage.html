@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/css/normalize.css" />
+    <link rel="stylesheet" href="assets/css/resoultpage.css" />
+    <title>Results</title>
+  </head>
+
+  <body>
+    <div class="win"></div>
+    <div class="lose"></div>
+    
+    </div>
+    <header>
+      <div class="logo">
+        <img src="./assets/img/epicode_logo.png" alt="logo" />
+      </div>
+      <div><h1 class="titolo">Results</h1></div>
+      <div><h2 class="titolo">The summary of your answers:</h2></div>
+    </header>
+    <main>
+      <div class="inlineBox alignLeft">
+        <p class="percent">
+          Correct <span class="bold"><span class="percentPos"></span>%<br /></span
+          ><span class="question"><span id="posQuestion"></span> questions</span>
+        </p>
+      </div>
+      <div class="inlineBox central">
+        <div class="color1"></div>
+        <div class="color2"></div>
+        <div class="color3"></div>
+        <div class="innerCircle">
+          <h4 class="congSubtitle">
+            Congratulation! <br />
+            <span class="blue">You passed the exam.</span>
+          </h4>
+          <p>we'll send you the certificate in few minutes. Check your email (including promotion / spam folder)</p>
+        </div>
+      </div>
+      <div class="inlineBox alignRight">
+        <p class="percent">
+          Wrong<br /><span class="bold"><span class="percentNeg">33.3</span>%<br /></span
+          ><span class="question"><span id="negQuestion">2/6</span> questions</span>
+        </p>
+      </div>
+      <footer>
+        <a href="./feedback.html"
+          ><div class="button"><p>RATE US</p></div></a
+        >
+      </footer>
+    </main>
+    <script src="assets/script/resoultpage.js"></script>
+  </body>
+</html>

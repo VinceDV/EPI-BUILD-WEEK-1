@@ -97,16 +97,12 @@ const questions = [
       incorrect_answers: ["Python", "C", "Jakarta"],
     },
   ];
-  
   const answers = {
     correct_answers: 0,
     questions: questions.length,
     punteggio: 0,
   };
 
-  
-  window.onload = function () {
-   
     let totalQuestionNumber = document.querySelector(".question-tot");
     totalQuestionNumber.innerText = " / " + questions.length;
   
@@ -119,7 +115,6 @@ const questions = [
     //passaggio alla pagina successiva
     const gotoResultsPage = function () {
       window.location.assign(
-        "https://www.w3schools.com" +
           answers.correct_answers +
           "&tot_questions=" +
           answers.questions
@@ -139,13 +134,6 @@ const questions = [
       container.remove();
       footer.remove();
   
-  
-      main.style = "text-align: center;";
-     
-      main.appendChild(text);
-    };
-    //set timer
-    let questionMaxTime = 2;
     let counter = questionMaxTime;
   
     const myTimer = function () {
@@ -164,7 +152,6 @@ const questions = [
           timerBar.classList.remove("animation");
           timerBar.offsetWidth;
           timerBar.classList.add("animation");
-          
           loadingResults();
           window.setTimeout(gotoResultsPage, 10);
         }
@@ -238,6 +225,3 @@ const questions = [
       }
     };
     newQuestion(0);
-  }
-
-  const wrong_answers = questions.length - answers.correct_answers;
