@@ -16,7 +16,7 @@ const questions = [
     type: "multiple",
     difficulty: "easy",
     question:
-      "In the programming language Java, which of these keywords would you put on a variable to make sure it doesn&#039;t get modified?",
+      "In Java, which of these keywords would you put on a variable to make sure it is not modified?",
     correct_answer: "Final",
     incorrect_answers: ["Static", "Private", "Public"],
   },
@@ -65,11 +65,7 @@ const questions = [
     question:
       "What is the code name for the mobile operating system Android 7.0?",
     correct_answer: "Nougat",
-    incorrect_answers: [
-      "Ice Cream Sandwich",
-      "Jelly Bean",
-      "Marshmallow",
-    ],
+    incorrect_answers: ["Ice Cream Sandwich", "Jelly Bean", "Marshmallow"],
   },
   {
     category: "Science: Computers",
@@ -97,43 +93,57 @@ const questions = [
     incorrect_answers: ["Python", "C", "Jakarta"],
   },
 ];
+
 const answers = {
   correct_answers: 0,
   questions: questions.length,
   punteggio: 0,
 };
 
-let totalQuestionNumber = document.querySelector(".question-tot");
-totalQuestionNumber.innerText = " / " + questions.length;
+window.onload = function () {
 
-let questionIndex = 0;
-//calcola numero intero casuale da 0 a max escluso [0,max)
-function getRandomInt(max) {
-  return Math.floor(Math.random() * max);
-}
 
-//passaggio alla pagina successiva
-const gotoResultsPage = function () {
-  window.location.assign(
-    answers.correct_answers +
-    "&tot_questions=" +
-    answers.questions
-  );
-};
-//rimuove contenuto pagina e carica immagine
-const loadingResults = function () {
-  let container = document.querySelector(".container");
-  let footer = document.querySelector("footer");
-  let main = document.querySelector("main");
-  let image = document.createElement("img");
-  let text = document.createElement("p");
-  text.classList.add("titolo");
-  text.innerHTML =
-    "ATTENDI!";
+  let totalQuestionNumber = document.querySelector(".question-tot");
+  totalQuestionNumber.innerText = " / " + questions.length;
 
-  container.remove();
-  footer.remove();
+  let questionIndex = 0;
+  //calcola
 
+  function getRandomInt(max) {
+    return Math.floor(Math.random() * max);
+  }
+
+  //passaggio alla pagina successiva
+  const gotoResultsPage = function () {
+    window.location.assign(
+      "./resultpage.html?correct_answers=" +
+        answers.correct_answers +
+        "&tot_questions=" +
+        answers.questions
+    );
+  };
+  //rimuove contenuto pagina e carica immagine
+  const loadingResults = function () {
+    let container = document.querySelector(".container");
+    let footer = document.getElementById("footerQuiz");
+    let main = document.querySelector("main");
+    let image = document.createElement("img");
+    let text = document.createElement("p");
+    text.classList.add("titolo");
+    text.innerHTML =
+      "ATTENDI!";
+
+    container.remove();
+    footer.remove();
+
+   
+
+    main.style = "text-align: center;";
+    
+    main.appendChild(text);
+  };
+  //set timer
+  let questionMaxTime = 30;
   let counter = questionMaxTime;
 
   const myTimer = function () {
@@ -141,7 +151,7 @@ const loadingResults = function () {
     counter--;
     timer.innerText = counter;
     //se il timer arriva a 0, se ci sono altre domande vai all domanda successiva e reset timer altrimenti pagina risultati
-    if (counter === 0) {
+    if (counter === -1) {
       questionIndex++;
       if (questionIndex < questions.length) {
         newQuestion(questionIndex);
@@ -152,6 +162,7 @@ const loadingResults = function () {
         timerBar.classList.remove("animation");
         timerBar.offsetWidth;
         timerBar.classList.add("animation");
+        //
         loadingResults();
         window.setTimeout(gotoResultsPage, 10);
       }
@@ -205,8 +216,7 @@ const loadingResults = function () {
   };
 
   const handleAnswer = function (e) {
-    // console.log("hai cliccato", e.srcElement.innerText);
-    /* se risposta corretta è uguale a quella cliccata*/
+   
     if (e.srcElement.innerText === questions[questionIndex].correct_answer) {
       answers.correct_answers++;
       answers.punteggio++;
@@ -225,3 +235,8 @@ const loadingResults = function () {
     }
   };
   newQuestion(0);
+
+ 
+};
+
+

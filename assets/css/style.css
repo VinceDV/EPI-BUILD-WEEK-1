@@ -1,0 +1,541 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;@400;700&family=Outfit:wght@300;400;700&display=swap");
+
+html body {
+  background-image: url(../img/bg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  font-family: "Inter", sans-serif;
+}
+
+#primoContainer {
+  width: 80%;
+  margin-left: 8em;
+}
+
+h1,
+h4,
+p {
+  color: white;
+}
+.titoloPrincipale h1 {
+  margin-top: 1.5em;
+  font-size: 70px;
+  font-family: "Outfit", sans-serif;
+  color: white;
+  font-weight: 300;
+  line-height: 0.8em;
+  width: 50%;
+}
+
+.titoloPrincipale h1 span {
+  font-weight: 700;
+}
+
+#istruzioni h3 {
+  font-family: "Inter", sans-serif;
+  color: #d20094;
+  font-weight: 700;
+  font-size: 25px;
+}
+
+#istruzioni {
+  color: white;
+  font-family: "Inter", sans-serif;
+  line-height: 1.5em;
+  font-size: 20px;
+  width: 60%;
+}
+
+#istruzioni ul li {
+  line-height: 2em;
+}
+#terminiScritta {
+  font-size: 20px;
+}
+#termini {
+  margin-top: 3em;
+  color: white;
+  width: 80%;
+}
+
+.pulsanteCeleste {
+  float: right;
+  border: none;
+  padding: 0.9em 3.5em;
+  font-size: 20px;
+  color: #23184e;
+  background-color: #00ffff;
+  font-family: "Outfit", sans-serif;
+  font-weight: 700;
+  transition: 0.3s;
+}
+
+.pulsanteCeleste:hover:enabled {
+  -webkit-box-shadow: 2px 2px 20px 3px #00ffff;
+  box-shadow: 2px 2px 20px 3px #00ffff;
+}
+
+.pulsanteCeleste:disabled {
+  background-color: grey;
+  color: white;
+}
+
+#termini input {
+  margin-top: 1em;
+}
+
+#quizContainer {
+  margin: 0, auto;
+  width: 100%;
+  text-align: center;
+}
+
+.pulsante {
+  padding: 20px 25px;
+  margin: 10px;
+  border-radius: 20px;
+  border: 2px solid white;
+  background-color: #00000023;
+  color: white;
+  width: 20%;
+  box-shadow: 1px 2px 5px 2px rgba(255, 255, 255, 1) inset;
+  -webkit-box-shadow: 1px 2px 5px 2px rgba(255, 255, 255, 1) inset;
+  -moz-box-shadow: 1px 2px 5px 2px rgba(255, 255, 255, 1) inset;
+  font-family: "Inter", sans-serif;
+}
+
+.pulsante:hover {
+  background-color: #d20094;
+}
+
+h2 {
+  font-size: 50px;
+  color: white;
+  font-family: "Outfit", sans-serif;
+  font-weight: 400;
+}
+
+#contaDomande {
+  margin: 50px auto;
+  color: white;
+  font-family: "Outfit", sans-serif;
+}
+
+.questionTot {
+  color: #d20094;
+}
+
+h3 {
+  color: white;
+  font-size: 18px;
+  font-family: "Inter", sans-serif;
+}
+
+#rating {
+  width: 50%;
+  margin: 0 auto;
+  text-align: center;
+  line-height: 1em;
+}
+
+#ratingBar input {
+  display: none;
+}
+
+#ratingBar label {
+  font-size: 40px;
+  color: #444;
+  padding: 10px;
+}
+
+#ratingBar input:not(:checked) ~ label:hover {
+  color: #d20094;
+}
+
+#ratingBar input:checked ~ label {
+  color: #d20094;
+}
+
+#inputFeedback {
+  width: 80%;
+  padding: 10px;
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid #d20094;
+  font-family: "inter", sans-serif;
+}
+
+.pulsanteFeedback {
+  margin: 50px auto;
+  border: none;
+  padding: 0.9em 2.5em;
+  font-size: 20px;
+  background-color: #00ffff;
+  font-family: "Outfit", sans-serif;
+  font-weight: 700;
+}
+
+.pulsanteFeedback:hover:enabled {
+  -webkit-box-shadow: 2px 2px 20px 3px #00ffff;
+  box-shadow: 2px 2px 20px 3px #00ffff;
+}
+
+#resultsContainer {
+  visibility: hidden;
+  margin: 50px auto;
+  text-align: center;
+  line-height: 0.5em;
+}
+
+#resultsContainer h3 {
+  font-weight: 400;
+}
+
+#rateButton {
+  margin: 50px auto;
+  border: 2px solid white;
+  padding: 0.9em 3em;
+  font-size: 20px;
+  background-color: transparent;
+  font-family: "Outfit", sans-serif;
+  font-weight: 700;
+  color: white;
+}
+
+/* Pagina quiz */
+header .logo {
+  width: 15rem;
+  padding-top: 5rem;
+  padding-left: 8rem;
+}
+.titolo {
+  color: white;
+  font-size: 40px;
+  font-weight: normal;
+  text-align: center;
+  /* margin: 0 auto; */
+  font-family: "Outfit", sans-serif;
+  width: 100%;
+}
+
+.titolo span {
+  font-weight: 900;
+}
+
+.timer {
+  color: white;
+  position: absolute;
+  top: 5rem;
+  right: 7vw;
+  font-family: "Outfit", sans-serif;
+  font-size: 3em;
+}
+
+.options {
+  color: white;
+  font-family: "Inter", sans-serif;
+  width: 60%;
+  margin: 0 auto;
+  font-size: 2em;
+}
+.option {
+  text-align: center;
+  border: whitesmoke solid 3px;
+  border-radius: 102px;
+  padding: 40px;
+  margin: 20px;
+  background-color: rgba(192, 192, 192, 0.1);
+  box-shadow: 2px 2px 5px;
+}
+.option:hover {
+  background-color: #d20094;
+}
+
+#footerQuiz {
+  color: white;
+  font-family: "Outfit", sans-serif;
+  font-size: large;
+  /* position: absolute; */
+  /* margin-left: 46%; */
+  margin-top: 4em;
+  text-align: center;
+}
+
+#footerQuiz .question-tot {
+  color: #d20094;
+}
+
+/* Result page */
+
+span.bold {
+  font-weight: bold;
+}
+
+/* header section */
+/* 
+  header div h1 {
+    font-size: 4em;
+    text-align: center;
+    font-weight: bold;
+    margin: 0;
+  }
+   */
+/* header div h2 {
+    font-size: 2em;
+    text-align: center;
+    font-weight: 400;
+    margin: 0 0 2%;
+    font-family: "Outfit", sans-serif;
+  }
+   */
+main div.inlineBox {
+  display: inline-block;
+  width: 20%;
+  height: 45vh;
+  position: relative;
+}
+
+main div.central {
+  width: 59%;
+  height: 50vh;
+  position: relative;
+}
+
+/* circle section */
+
+main div.central div.color1 {
+  z-index: 3;
+  border: 6.5vh solid;
+  border-radius: 50%;
+  border-color: #00ffff transparent #00ffff #00ffff;
+  transform: rotate(-45deg);
+  height: 250px;
+  width: 250px;
+  position: absolute;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 15px black, inset 0 0 10px black;
+}
+
+main div.central div.color2 {
+  z-index: 2;
+  border: 6.5vh solid;
+  border-radius: 50%;
+  border-color: #d20094 transparent transparent #d20094;
+  transform: rotate(-45deg);
+  height: 250px;
+  width: 250px;
+  position: absolute;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 15px black, inset 0 0 10px black;
+}
+
+main div.central div.color3 {
+  z-index: 1;
+  border: 6.5vh solid;
+  border-radius: 50%;
+  border-color: #00ffff;
+  transform: rotate(-45deg);
+  height: 250px;
+  width: 250px;
+  position: absolute;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 15px black, inset 0 0 10px black;
+}
+
+/* inner text section */
+
+main div.central div.innerCircle {
+  position: absolute;
+  text-align: center;
+  font-size: 0.8em;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 250px;
+  width: 40%;
+  max-width: 300px;
+}
+
+div.innerCircle h4.congSubtitle {
+  position: absolute;
+  font-size: 1.2em;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+div.innerCircle span.blue {
+  color: aqua;
+}
+
+div.innerCircle p {
+  font-size: 0.9em;
+  width: 60%;
+  position: absolute;
+  top: 56%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+main div.inlineBox p.percent {
+  position: absolute;
+  font-size: 3em;
+  top: 40%;
+  transform: translate(-50%, -50%);
+  padding: 0;
+}
+
+main div.alignLeft p.percent {
+  left: 100%;
+}
+
+main div.inlineBox span.question {
+  font-size: 0.4em;
+  font-weight: 400;
+}
+
+main div.alignLeft {
+  text-align: left;
+}
+
+main div.alignRight {
+  text-align: right;
+}
+
+/* footer section */
+
+footer {
+  position: relative;
+  margin: 0 auto;
+  height: 15vh;
+}
+
+footer div.button {
+  margin-left: 41%;
+  box-sizing: border-box;
+  width: 17%;
+}
+
+footer div.button p {
+  border: solid 1px white;
+  display: inline-block;
+  font-weight: bold;
+  color: white;
+  font-size: 1.4em;
+  padding: 8% 0;
+  width: 100%;
+  text-align: center;
+}
+
+footer div.button p:hover {
+  box-shadow: 0px 0px 20px #3195e27c;
+}
+
+/* Rating */
+.container {
+  text-align: center;
+  width: 90%;
+  margin: 8em auto;
+}
+.ratings {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  direction: rtl;
+  text-align: center;
+}
+
+.star {
+  position: relative;
+  line-height: 60px;
+  display: inline-block;
+  transition: color 0.2s ease;
+  color: #202650;
+  margin-bottom: 2rem;
+}
+
+.star:before {
+  content: "\2605";
+  width: 60px;
+  height: 60px;
+  font-size: 80px;
+}
+
+.star:hover,
+.star.selected,
+.star:hover ~ .star,
+.star.selected ~ .star {
+  transition: color 0.3s ease;
+  color: #00ffff;
+}
+
+button {
+  font-weight: bold;
+  color: black;
+  background-color: #00ffff;
+  border: none;
+  padding-left: 50px;
+  padding-right: 50px;
+  transition: 0.3s;
+}
+button:hover {
+  box-shadow: #00ffff 0 0 20px;
+}
+input {
+  width: 48%;
+  border: none;
+  border-bottom: #d20094 solid 2px;
+  background-color: transparent;
+  color: white;
+  padding-top: 20px;
+  margin-top: 1em;
+  box-sizing: border-box;
+  padding-left: 30px;
+  padding-bottom: 10px;
+}
+
+.titoloRisultato {
+  text-align: center;
+  font-size: 60px;
+  margin-bottom: 0;
+}
+.sottotitoloRisultato {
+  text-align: center;
+  font-size: 30px;
+  margin: 0;
+}
+
+#tR {
+  margin: 2rem auto;
+}
+#stR {
+  margin: 2rem auto;
+}
+#moreInfo {
+  border: none;
+  padding: 0.9em 3.5em;
+  font-size: 20px;
+  color: #23184e;
+  background-color: #00ffff;
+  font-family: "Outfit", sans-serif;
+  font-weight: 700;
+  transition: 0.3s;
+}
+#ultimoSpan {
+  text-align: center;
+}
+button,
+td {
+  cursor: pointer;
+}

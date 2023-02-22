@@ -11,24 +11,27 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="assets/css/normalize.css" />
-    <link rel="stylesheet" href="./assets/css/feedback.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
 
     <title>Feedback</title>
   </head>
 
   <body>
     <header>
-      <div class="logo">
-        <img src="./assets/img/epicode_logo.png" alt="Logo" />
+      <div>
+        <img src="./assets/img/epicode_logo.png" alt="Logo" class="logo" />
       </div>
-      <h1 class="titolo">Tell us how it's going</h1>
     </header>
 
     <main>
       <div class="container">
-        <ul class="ratings"> <h2>From 0 to 10, how likely are you to recommend EPICODE 
-            <br />?to a friend or a colleague</h2>
-            <br />
+        <h1 class="titoloRisultato" id="tR">Tell us how it's going</h1>
+        <ul class="ratings">
+          <h2 class="sottotitoloRisultato" id="stR">
+            From 0 to 10, how likely are you to recommend EPICODE <br />?to a
+            friend or a colleague
+          </h2>
+          <br />
           <li class="star"></li>
           <li class="star"></li>
           <li class="star"></li>
@@ -41,20 +44,22 @@
           <li class="star"></li>
         </ul>
 
-        <h2 class="sottotitolo">Leave us an open feedback about your experience so far</h2>
+        <h2 class="sottotitoloRisultato">
+          Leave us an open feedback about your experience so far
+        </h2>
         <input type="text" placeholder="Write your comment here" size="60" />
       </div>
     </main>
 
-    <footer>
+    <div id="ultimoSpan">
       <a href="#">
-        <button>
-          <h2>MORE INFO</h2>
+        <button id="moreInfo">
+          MORE INFO
         </button>
       </a>
-    </footer>
+    </span>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="./assets/script/feedback.js"></script>
+    <script src="assets/script/feedback.js"></script>
   </body>
 </html>
