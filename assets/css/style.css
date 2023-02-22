@@ -435,6 +435,7 @@ footer div.button p {
   padding: 8% 0;
   width: 100%;
   text-align: center;
+  transition: .3s;
 }
 
 footer div.button p:hover {
