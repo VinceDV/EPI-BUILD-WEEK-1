@@ -492,14 +492,13 @@ button {
 button:hover {
   box-shadow: #00ffff 0 0 20px;
 }
-input {
+#barraFB {
   width: 48%;
   border: none;
   border-bottom: #d20094 solid 2px;
   background-color: transparent;
   color: white;
   padding-top: 20px;
-  margin-top: 1em;
   box-sizing: border-box;
   padding-left: 30px;
   padding-bottom: 10px;
