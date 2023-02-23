@@ -117,9 +117,13 @@ p {
 }
 
 /* Quando vado sopra con il mouse (opzionale) */
+
 .checkbox-wrapper .checkmark:hover {
+
+/* .checkbox-wrapper:hover input ~ .checkmark {
+
   background-color: #cccccc;
-}
+} */
 
 /* Quando l'input è selezionato, coloro il bordo dell'input */
 .checkbox-wrapper input:checked ~ .checkmark {
@@ -341,13 +345,16 @@ header .logo {
   right: 7vw;
   font-family: "Outfit", sans-serif;
   font-size: 3em;
+  text-align: center;
+  width: 150px;
 }
+
 .timer-bar {
   width: 150px;
   height: 150px;
   position: absolute;
   top: 2em;
-  right: 5.3em;
+  right: 8.3em;
   border: 13px solid rgba(0, 110, 255, 0.919);
   border-radius: 50%;
   box-sizing: border-box;
@@ -360,10 +367,10 @@ header .logo {
   animation-timing-function: linear;
   animation-iteration-count: infinite;
   border-color: transparent;
-  border-top-color: rgba(0, 110, 255, 0.919);
-  border-right-color: rgba(0, 110, 255, 0.919);
-  border-bottom-color: rgba(0, 110, 255, 0.919);
-  border-left-color: rgba(0, 110, 255, 0.919);
+  border-top-color: #00ffff;
+  border-right-color: #00ffff;
+  border-bottom-color: #00ffff;
+  border-left-color: #00ffff;
 }
 
 @keyframes example {
