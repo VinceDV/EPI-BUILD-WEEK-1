@@ -87,6 +87,28 @@
      cursor: pointer;
 }
 /* Creo la spunta all'interno dell'input (inizialmente nascosta) */
+
+.checkbox-wrapper .checkmark::after {
+  content: "";
+  position: absolute;
+  left: 6px;
+  top: 2px;
+  width: 5px;
+  height: 10px;
+  border: solid #d20094;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  display: none;
+}
+
+/* Quando vado sopra con il mouse (opzionale) */
+.checkbox-wrapper .checkmark:hover {
+  background-color: #cccccc;
+}
+
+
  .checkbox-wrapper .checkmark::after {
      content: "";
      position: absolute;
@@ -101,6 +123,7 @@
      transform: rotate(45deg);
      display: none;
 }
+
 /* Quando l'input è selezionato, coloro il bordo dell'input */
  .checkbox-wrapper input:checked ~ .checkmark {
      border-color: #d20094;
