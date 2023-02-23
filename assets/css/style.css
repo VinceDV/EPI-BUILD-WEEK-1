@@ -539,3 +539,8 @@ button,
 td {
   cursor: pointer;
 }
+
+#checkTermini {
+  accent-color: #0B113B;
+  border-color: white;
+}
