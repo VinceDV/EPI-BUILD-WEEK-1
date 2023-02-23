@@ -292,7 +292,7 @@
 }
  .timer-bar.animation {
      animation-name: example;
-     animation-duration: 30s;
+     animation-duration: 31s;
      animation-timing-function: linear;
      animation-iteration-count: infinite;
      border-color: transparent;
