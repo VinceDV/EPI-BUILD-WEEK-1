@@ -12,7 +12,10 @@ html body {
   width: 80%;
   margin-left: 8em;
 }
-
+button:hover:enabled,
+td {
+  cursor: pointer;
+}
 h1,
 h4,
 p {
@@ -223,6 +226,48 @@ header .logo {
   font-weight: 900;
 }
 
+/* .timer {
+  color: white;
+  position: absolute;
+  top: 5rem;
+  right: 7vw;
+  font-family: "Outfit", sans-serif;
+  font-size: 3em;
+ }
+ .timer-bar {
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  top: 3.5em;
+  right: 6.4em;
+  border: 12px solid rgba(0, 110, 255, 0.919);
+  border-radius: 50%;
+  box-sizing: border-box;
+  transform: rotate(180deg);
+  clip: rect(0px, 50px, 100px, 0px);
+}
+
+.timer-bar.animation {
+  animation-name: example;
+  animation-duration: 10s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  border-color: transparent;
+  border-top-color: rgba(0, 110, 255, 0.919);
+  border-right-color: rgba(0, 110, 255, 0.919);
+  border-bottom-color: rgba(0, 110, 255, 0.919);
+  border-left-color: rgba(0, 110, 255, 0.919);
+}
+
+@keyframes example {
+  0% {
+    clip-path: circle(100% at 0% 100%);
+  }
+
+  100% {
+    clip-path: circle(50% at 0% 100%);
+  }
+} */
 .timer {
   color: white;
   position: absolute;
@@ -231,7 +276,39 @@ header .logo {
   font-family: "Outfit", sans-serif;
   font-size: 3em;
 }
+.timer-bar {
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  top: 2em;
+  right: 5.3em;
+  border: 13px solid rgba(0, 110, 255, 0.919);
+  border-radius: 50%;
+  box-sizing: border-box;
+  transform: rotate(90deg);
+}
 
+.timer-bar.animation {
+  animation-name: example;
+  animation-duration: 30s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  border-color: transparent;
+  border-top-color: rgba(0, 110, 255, 0.919);
+  border-right-color: rgba(0, 110, 255, 0.919);
+  border-bottom-color: rgba(0, 110, 255, 0.919);
+  border-left-color: rgba(0, 110, 255, 0.919);
+}
+
+@keyframes example {
+  0% {
+    clip-path: inset(0 0 0 0);
+  }
+
+  100% {
+    clip-path: inset(0 0 0 100%);
+  }
+}
 .options {
   color: white;
   font-family: "Inter", sans-serif;
@@ -256,8 +333,6 @@ header .logo {
   color: white;
   font-family: "Outfit", sans-serif;
   font-size: large;
-  /* position: absolute; */
-  /* margin-left: 46%; */
   margin-top: 4em;
   text-align: center;
 }
@@ -272,23 +347,6 @@ span.bold {
   font-weight: bold;
 }
 
-/* header section */
-/* 
-  header div h1 {
-    font-size: 4em;
-    text-align: center;
-    font-weight: bold;
-    margin: 0;
-  }
-   */
-/* header div h2 {
-    font-size: 2em;
-    text-align: center;
-    font-weight: 400;
-    margin: 0 0 2%;
-    font-family: "Outfit", sans-serif;
-  }
-   */
 main div.inlineBox {
   display: inline-block;
   width: 20%;
@@ -435,7 +493,7 @@ footer div.button p {
   padding: 8% 0;
   width: 100%;
   text-align: center;
-  transition: .3s;
+  transition: 0.3s;
 }
 
 footer div.button p:hover {
@@ -490,9 +548,7 @@ button {
   padding-right: 50px;
   transition: 0.3s;
 }
-button:hover {
-  box-shadow: #00ffff 0 0 20px;
-}
+
 #barraFB {
   width: 48%;
   border: none;
@@ -532,15 +588,14 @@ button:hover {
   font-weight: 700;
   transition: 0.3s;
 }
+#moreInfo:hover {
+  box-shadow: #00ffff 0 0 20px;
+}
 #ultimoSpan {
   text-align: center;
 }
-button,
-td {
-  cursor: pointer;
-}
 
 #checkTermini {
-  accent-color: #0B113B;
+  accent-color: #0b113b;
   border-color: white;
 }
