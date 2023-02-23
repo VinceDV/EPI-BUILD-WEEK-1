@@ -117,13 +117,9 @@ p {
 }
 
 /* Quando vado sopra con il mouse (opzionale) */
-
 .checkbox-wrapper .checkmark:hover {
-
-/* .checkbox-wrapper:hover input ~ .checkmark {
-
   background-color: #cccccc;
-} */
+}
 
 /* Quando l'input è selezionato, coloro il bordo dell'input */
 .checkbox-wrapper input:checked ~ .checkmark {
