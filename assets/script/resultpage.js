@@ -59,9 +59,9 @@ const resultsTest = (cor, tot) => {
     const failedTest = document.querySelector(".innerCircle");
     failedTest.innerHTML = `<h4 class="congSubtitle" style="color:red">
               Failed test! <br>
-              <span class="blue">You did't pass the exam.</span>
+              <span class="blue">You didn't pass the exam.</span>
             </h4>
-            <p>We'll send you the report in a few minutes. Check your email (including promotion / spam folder)</p>`;
+            <p><br>We'll send you the report in a few minutes. Check your email (including promotion / spam folder)</p>`;
     const blueAdvise = document.querySelector("div.innerCircle span.blue");
     blueAdvise.style.color = "darkViolet";
   } else {
