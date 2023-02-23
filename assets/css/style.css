@@ -72,7 +72,6 @@ p {
   position: relative;
   padding-left: 35px;
   margin-bottom: 12px;
-  cursor: pointer;
   font-size: 16px;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -98,6 +97,7 @@ p {
   width: 20px;
   background-color:transparent;
   border: 2px solid white;
+  cursor: pointer;
 }
 
 /* Creo la spunta all'interno dell'input (inizialmente nascosta) */
@@ -117,7 +117,11 @@ p {
 }
 
 /* Quando vado sopra con il mouse (opzionale) */
+
+.checkbox-wrapper .checkmark:hover {
+
 /* .checkbox-wrapper:hover input ~ .checkmark {
+
   background-color: #cccccc;
 } */
 
