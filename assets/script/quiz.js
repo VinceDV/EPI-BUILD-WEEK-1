@@ -107,8 +107,8 @@ window.onload = function () {
   totalQuestionNumber.innerText = " / " + questions.length;
 
   let questionIndex = 0;
-  //calcola
 
+  // randomizza l'ordine delle risposte
   function getRandomInt(max) {
     return Math.floor(Math.random() * max);
   }
@@ -117,9 +117,9 @@ window.onload = function () {
   const gotoResultsPage = function () {
     window.location.assign(
       "./resultpage.html?correct_answers=" +
-        answers.correct_answers +
-        "&tot_questions=" +
-        answers.questions
+      answers.correct_answers +
+      "&tot_questions=" +
+      answers.questions
     );
   };
   //rimuove contenuto pagina e carica immagine
@@ -136,10 +136,10 @@ window.onload = function () {
     container.remove();
     footer.remove();
 
-   
+
 
     main.style = "text-align: center;";
-    
+
     main.appendChild(text);
   };
   //set timer
@@ -186,14 +186,13 @@ window.onload = function () {
     timerBar.classList.remove("animation");
     timerBar.offsetWidth;
     timerBar.classList.add("animation");
-    //
 
     if (questions[index].type !== "boolean") {
       options = questions[index].incorrect_answers;
       let optionCorrect = questions[index].correct_answer;
       let randomIndex = getRandomInt(options.length); //lenght va da 2 a 4 -> random va da 0 a 3
       options.splice(randomIndex, 0, optionCorrect); // aggiungo la risposta corretta ad un indice casuale
-      // console.log(options);
+
     } else {
       options = ["True", "False"];
     }
@@ -214,9 +213,9 @@ window.onload = function () {
     let questionNumber = document.querySelector(".question-num");
     questionNumber.innerText = index + 1;
   };
-
+  // riconoscimento risposta
   const handleAnswer = function (e) {
-   
+
     if (e.srcElement.innerText === questions[questionIndex].correct_answer) {
       answers.correct_answers++;
       answers.punteggio++;
@@ -235,8 +234,4 @@ window.onload = function () {
     }
   };
   newQuestion(0);
-
- 
 };
-
-

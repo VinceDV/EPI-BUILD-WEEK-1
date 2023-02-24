@@ -1,4 +1,4 @@
-let param = new URLSearchParams(location.search);
+let param = new URLSearchParams(location.search); //richiama gli elementi dalla pagina precedente
 let correct_answers = param.get("correct_answers");
 let questions = param.get("tot_questions");
 
@@ -11,7 +11,6 @@ let didYouPass = Boolean; // esito test, + di 60% è passato
 const resultsTest = (cor, tot) => {
   outPercPos = Math.round((cor / tot) * 100); // calcola percentuale risposte positive
   outPercNeg = Math.round((1 - cor / tot) * 100);
-  console.log(" percentuali corrette/sbagliate", outPercPos, outPercNeg);
 
   const posPercentage = document.querySelector(".percentPos"); // selettore nodo percentuale positiva
   posPercentage.innerText = `${outPercPos}`;
@@ -72,8 +71,6 @@ const resultsTest = (cor, tot) => {
   return 1;
 };
 
-// console.log(outPercPos, outPercNeg, didYouPass);
-
 const circlePercentage = (redCircleAmount) => {
   // converto percentuali in gradi di rotazione
   console.log("circlePercentage eseguita, input della funzione", redCircleAmount);
@@ -113,9 +110,4 @@ const circlePercentage = (redCircleAmount) => {
   }
   return 1;
 };
-
-//resultsTestConverter(correct_answers, questions);
-//circlePercentage(outPercNeg);
 resultsTest(correct_answers, questions);
-
-//variabili più leggibili (non fare combinazioni invertite)
