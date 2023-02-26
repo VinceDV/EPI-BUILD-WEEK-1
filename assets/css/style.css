@@ -291,6 +291,7 @@ header .logo {
   border-radius: 50%;
   box-sizing: border-box;
   transform: rotate(90deg);
+  z-index: 2;
 }
 .timer-bar.animation {
   animation-name: example;
@@ -568,4 +569,33 @@ button {
 #checkTermini {
   accent-color: #0b113b;
   border-color: white;
+}
+
+
+.base-timer {
+  position: absolute;
+  top: 2em;
+  right: 8.3em;
+  height: 150px;
+  width: 150px;
+}
+
+/* Removes SVG styling that would hide the time label */
+.base-timer__circle {
+  fill: none;
+  stroke: none;
+}
+
+/* The SVG path that displays the timer's progress */
+.base-timer__path-elapsed {
+  stroke-width: 10px;
+  stroke: grey;
+}
+
+#secRimasti {
+  position: absolute;
+  right: 12.6em;
+  top: 3.8em;
+  height: 100%;
+  font-size: smaller;
 }

@@ -28,7 +28,7 @@ const resultsTest = (cor, tot) => {
     // test passaggio esame + 60%
     // aggiunta immagini
     didYouPass = true;
-    
+
     const passedTestSel = document.querySelectorAll(".passedTest");
     passedTestSel.forEach(element => {
       element.style.visibility = "visible";
@@ -40,8 +40,6 @@ const resultsTest = (cor, tot) => {
 
   } else if (Math.round(outPercPos) < 60) {
     didYouPass = false;
-  
-   
     const passedTestSel = document.querySelectorAll(".notPassedTest");
     passedTestSel.forEach(element => {
       element.style.visibility = "visible";
